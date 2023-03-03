@@ -26,7 +26,7 @@ function App() {
 
   const getGeoData = (name) => {
     setCityNames([]);
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${process.env.REACT_APP_API_KEY}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${process.env.REACT_APP_API_KEY}`)
       .then(response => response.json())
       .then(response => setCityNames(response))
       .catch(err => console.log(err));
@@ -36,7 +36,7 @@ function App() {
     setWeatherData([]);
     if (units !== 'metric') setUnit('imperial')
     else setUnit('metric');
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=${units}&appid=${process.env.REACT_APP_API_KEY}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=${units}&appid=${process.env.REACT_APP_API_KEY}`)
       .then(response => response.json())
       .then(response => setWeatherData(response))
       .catch(err => console.error(err)); 

@@ -471,7 +471,9 @@ footer p a {
 
 @media (max-width: 750px) {
   .main-data {
-    width: 50%;
+    width: 100%;
+    min-height: 80%;
+    overflow: hidden;
   }
 
   .weather-info {
@@ -502,7 +504,6 @@ footer p a {
     margin-bottom: 30px;
   }
 
-  .main-data,
   .weather-info {
     width: 100%;
     height: auto;
